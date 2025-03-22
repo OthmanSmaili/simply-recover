@@ -19,6 +19,7 @@ body {
   color: var(--dark);
   line-height: 1.6;
   overflow-x: hidden;
+  padding-top: 70px;
 }
 
 body.menu-open {
@@ -212,6 +213,8 @@ nav {
   padding-top: 70px;
   border-radius: 0 0 30px 30px;
   margin-bottom: 20px;
+  margin-top: -70px; /* Offset the body padding for the hero section */
+  padding-top: 90px; /* Extra padding to ensure content is visible */
 }
 
 .hero-content {
@@ -259,6 +262,7 @@ section {
   padding: 5rem 1rem;
   max-width: 1200px;
   margin: 0 auto;
+  scroll-margin-top: 80px;
 }
 
 .section-title {
@@ -939,6 +943,21 @@ footer {
 
   .contact-container {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 60px; /* Slightly smaller padding for mobile */
+  }
+
+  .hero {
+    margin-top: -60px;
+    padding-top: 80px;
+  }
+
+  section {
+    scroll-margin-top: 70px;
   }
 }
 
