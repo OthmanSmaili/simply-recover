@@ -392,10 +392,13 @@ section {
   color: var(--dark);
 }
 
-/* Programs Section */
+/* Programs Section with enhanced borders */
 .programs-grid {
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-  gap: 3rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin: 0 auto;
+  max-width: 1200px;
 }
 
 .program-card {
@@ -403,10 +406,46 @@ section {
   flex-direction: column;
   height: 100%;
   transition: transform 0.3s, box-shadow 0.3s;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eaeaea;
+  position: relative;
+}
+
+.program-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, var(--primary), var(--secondary));
+}
+
+.program-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  border-color: #d0d0d0;
 }
 
 .program-card img {
-  height: 250px;
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  object-position: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  transition: transform 0.5s ease;
+}
+.program-card:hover img {
+  transform: scale(1.05);
+}
+
+.program-card .img-container {
+  height: 280px;
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
 }
 
 .program-card .service-content {
@@ -414,11 +453,25 @@ section {
   display: flex;
   flex-direction: column;
   padding: 2rem;
+  border-top: none;
 }
 
 .program-card h3 {
   font-size: 1.4rem;
   margin-bottom: 1rem;
+  color: var(--primary);
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+.program-card h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background-color: var(--secondary);
 }
 
 .program-card p {
@@ -919,11 +972,6 @@ footer {
     height: 250px;
   }
 
-  .programs-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
   .services-offered-grid,
   .resources-grid,
   .why-choose-grid {
@@ -958,6 +1006,10 @@ footer {
 
   section {
     scroll-margin-top: 70px;
+  }
+
+  .programs-grid {
+    grid-template-columns: 1fr;
   }
 }
 
