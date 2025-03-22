@@ -199,7 +199,7 @@ function submitContactForm(event) {
   const formObject = Object.fromEntries(formData.entries());
 
   // Prepare email content
-  const subject = `Contact Form: ${formObject.subject}`;
+  const subject = `Contact Form: ${formObject.name} - ${formObject.subject}`;
   const body = `
         Name: ${formObject.name}
         Email: ${formObject.email}
