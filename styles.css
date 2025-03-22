@@ -1,9 +1,8 @@
 /* Base styles */
 :root {
-  --primary: #30a37d;
-  --secondary: #37c998;
-  --accent: #dfdfdf;
-  --light: #FAF9F6;
+  --primary: #0faa76;
+  --secondary: #37b68c;
+  --accent: #30a37d3f;
   --dark: #333333;
 }
 
@@ -15,11 +14,15 @@
 }
 
 body {
-  background-color: var(--light);
+  background: linear-gradient(to right, hwb(0 73% 27%), #bcfcf3a6);
   color: var(--dark);
   line-height: 1.6;
   overflow-x: hidden;
   padding-top: 70px;
+}
+
+a {
+  text-decoration: none;
 }
 
 body.menu-open {
@@ -43,6 +46,7 @@ nav {
   padding: 1rem 5%;
   max-width: 1200px;
   margin: 0 auto;
+  text-decoration: none;
 }
 
 .nav-container {
@@ -346,7 +350,7 @@ section {
 }
 
 .mission-box {
-  background-color: #FAF9F6;
+  background-color: #faf9f6;
   border-left: 4px solid var(--primary);
   padding: 1.5rem;
   margin: 1.5rem 0;
@@ -354,7 +358,7 @@ section {
 }
 
 .vision-box {
-  background-color: #FAF9F6;
+  background-color: #faf9f6;
   border-left: 4px solid var(--primary);
 }
 
@@ -505,9 +509,10 @@ section {
 
 .services-offered-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
+  justify-content: center;
 }
 
 .service-item {
@@ -588,7 +593,6 @@ section {
   flex: 0 0 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: rgba(91, 142, 125, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -596,7 +600,7 @@ section {
 }
 
 .why-icon {
-  font-size: 24px;
+  font-size: 35px;
   font-style: normal;
 }
 
@@ -682,7 +686,7 @@ section {
 
 /* Testimonials Section */
 .testimonials {
-  background-color: var(--accent);
+  background-color: #0063421a;
   text-align: center;
   padding: 4rem 1rem 7rem;
   border-radius: 30px;
