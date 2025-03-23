@@ -596,7 +596,6 @@ section {
   }
 }
 
-
 @media (max-width: 768px) {
   .service-item {
     width: 100%; /* Full width for mobile */

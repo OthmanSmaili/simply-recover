@@ -2,26 +2,129 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Primary Meta Tags -->
     <title>
       Simply Recover OC | Mental Health Rehabilitation in Orange County
     </title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <meta
+      name="title"
+      content="Simply Recover OC | Mental Health Rehabilitation in Orange County"
+    />
+    <meta
+      name="description"
+      content="Personalized IOP and PHP mental health care for individuals and families in Orange County. Expert treatment for anxiety, depression, substance abuse, and family therapy."
+    />
+    <meta
+      name="keywords"
+      content="mental health, rehabilitation, Orange County, PHP program, IOP program, therapy, anxiety treatment, depression treatment, substance abuse, family therapy, recovery"
+    />
+    <meta name="author" content="Simply Recover OC" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://simplyrecoveroc.com/" />
+    <meta
+      property="og:title"
+      content="Simply Recover OC | Mental Health Rehabilitation in Orange County"
+    />
+    <meta
+      property="og:description"
+      content="Personalized IOP and PHP mental health care for individuals and families in Orange County. Expert treatment for anxiety, depression, substance abuse, and family therapy."
+    />
+    <meta property="og:image" content="/assets/therapy.webp" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://simplyrecoveroc.com/" />
+    <meta
+      property="twitter:title"
+      content="Simply Recover OC | Mental Health Rehabilitation in Orange County"
+    />
+    <meta
+      property="twitter:description"
+      content="Personalized IOP and PHP mental health care for individuals and families in Orange County. Expert treatment for anxiety, depression, substance abuse, and family therapy."
+    />
+    <meta property="twitter:image" content="/assets/therapy.webp" />
+
+    <!-- Preload critical assets -->
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      as="style"
+    />
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+      as="script"
+    />
+    <link rel="preload" href="/assets/4.png" as="image" />
+    <link rel="preload" href="/assets/therapy.webp" as="image" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="/assets/favicon.ico" />
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+
+    <!-- Stylesheets -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
     />
     <link rel="stylesheet" href="styles.css" />
+
+    <!-- Structured Data Schema.org -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "MedicalOrganization",
+        "name": "Simply Recover OC",
+        "url": "https://simplyrecoveroc.com",
+        "logo": "https://simplyrecoveroc.com/assets/4.png",
+        "description": "Personalized IOP and PHP mental health care for individuals and families in Orange County.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "2114 N Broadway, STE 100",
+          "addressLocality": "Santa Ana",
+          "addressRegion": "CA",
+          "postalCode": "92706",
+          "addressCountry": "US"
+        },
+        "telephone": "+16579002111",
+        "email": "admin@simplyrecoveroc.com",
+        "medicalSpecialty": [
+          "Mental Health",
+          "Substance Abuse Treatment",
+          "Depression Treatment",
+          "Anxiety Treatment",
+          "Family Therapy"
+        ]
+      }
+    </script>
   </head>
   <body>
     <header>
-      <nav>
+      <nav aria-label="Main Navigation">
         <div class="nav-container">
-          <a href="#home" class="logo"><img src="/assets/4.png" alt="Simply Recover OC Logo" class="logo-img"></a>
+          <a href="#home" class="logo" aria-label="Simply Recover OC Home">
+            <img
+              src="/assets/4.png"
+              alt="Simply Recover OC Logo"
+              class="logo-img"
+              width="250"
+              height="250"
+            />
+          </a>
           <button
             class="mobile-menu-btn"
             id="mobile-menu-toggle"
             aria-label="Toggle navigation menu"
+            aria-expanded="false"
+            aria-controls="mobile-nav"
           >
             <span></span>
             <span></span>
@@ -34,14 +137,14 @@
             <li><a href="#services">Services</a></li>
             <li><a href="#contact">Contact</a></li>
             <li>
-              <a href="#booking" class="desktop-cta"
-                ><button class="cta-button">Free Consultation</button>
+              <a href="#booking" class="desktop-cta">
+                <button class="cta-button">Free Consultation</button>
               </a>
             </li>
           </ul>
         </div>
       </nav>
-      <div class="mobile-nav" id="mobile-nav">
+      <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
         <ul class="mobile-nav-links">
           <li><a href="#home" class="mobile-nav-link">Home</a></li>
           <li><a href="#about" class="mobile-nav-link">About</a></li>
@@ -49,562 +152,724 @@
           <li><a href="#services" class="mobile-nav-link">Services</a></li>
           <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
           <li>
-            <a href="#booking" class="mobile-nav-link"
-              ><button class="cta-button">Free Consultation</button></a
-            >
+            <a href="#booking" class="mobile-nav-link">
+              <button class="cta-button">Free Consultation</button>
+            </a>
           </li>
         </ul>
       </div>
     </header>
 
-    <section class="hero" id="home" data-aos="fade-in" data-aos-duration="1000">
-      <div class="hero-content">
-        <h1 data-aos="fade-up" data-aos-delay="200">
-          Where Healing Happens, Simply.
-        </h1>
-        <p data-aos="fade-up" data-aos-delay="400">
-          Personalized IOP and PHP care for individuals and families — right
-          here in Orange County.
-        </p>
-        <p data-aos="fade-up" data-aos-delay="500">
-          At <strong>Simply Recover OC</strong>, we believe healing doesn't have
-          to feel complicated. Our expert clinicians and therapists guide you
-          through recovery with care, compassion, and simplicity. Whether you're
-          managing anxiety, depression, substance abuse, or navigating family
-          challenges, our tailored treatment programs empower you to reclaim
-          your life.
-        </p>
-        <div class="hero-buttons" data-aos="fade-up" data-aos-delay="600">
-          <a href="#booking"
-            ><button class="cta-button">Start Your Journey</button></a
+    <main>
+      <section
+        class="hero"
+        id="home"
+        data-aos="fade-in"
+        data-aos-duration="1000"
+      >
+        <div class="hero-content">
+          <h1 data-aos="fade-up" data-aos-delay="200">
+            Where Healing Happens, Simply.
+          </h1>
+          <p data-aos="fade-up" data-aos-delay="400">
+            Personalized IOP and PHP care for individuals and families — right
+            here in Orange County.
+          </p>
+          <p data-aos="fade-up" data-aos-delay="500">
+            At <strong>Simply Recover OC</strong>, we believe healing doesn't
+            have to feel complicated. Our expert clinicians and therapists guide
+            you through recovery with care, compassion, and simplicity. Whether
+            you're managing anxiety, depression, substance abuse, or navigating
+            family challenges, our tailored treatment programs empower you to
+            reclaim your life.
+          </p>
+          <div class="hero-buttons" data-aos="fade-up" data-aos-delay="600">
+            <a href="#booking">
+              <button class="cta-button">Start Your Journey</button>
+            </a>
+            <a href="#contact">
+              <button class="cta-button secondary-button">Contact Us</button>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" aria-labelledby="about-heading">
+        <div class="section-title" data-aos="fade-up">
+          <h2 id="about-heading">About Simply Recover OC</h2>
+          <p>Guided healing with clarity and compassion</p>
+        </div>
+        <div class="about-content">
+          <div class="about-image" data-aos="fade-right" data-aos-delay="200">
+            <div class="image-container">
+              <img
+                src="/assets/support.webp"
+                alt="Therapist showing support to a client"
+                width="600"
+                height="300"
+                loading="lazy"
+              />
+            </div>
+            <div class="image-container">
+              <img
+                src="/assets/binder.webp"
+                alt="Reflection binder used in therapy sessions"
+                width="600"
+                height="300"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="about-text" data-aos="fade-left" data-aos-delay="400">
+            <p>
+              Simply Recover OC is an accredited, state-of-the-art
+              rehabilitation center located in the heart of Orange County. Since
+              our founding, we have been dedicated to providing exceptional,
+              evidence-based care for individuals struggling with mental health
+              challenges, trauma, depression, substance abuse, and related
+              conditions.
+            </p>
+
+            <div class="mission-box">
+              <div class="mission-title">Our Mission</div>
+              <p>
+                To make the path to healing clear, accessible, and compassionate
+                for every person and family we serve.
+              </p>
+            </div>
+
+            <div class="mission-box vision-box">
+              <div class="mission-title">Our Vision</div>
+              <p>
+                A community where mental health and recovery are nurtured
+                without judgment, and every step forward feels simple and
+                supported.
+              </p>
+            </div>
+
+            <p>
+              Our licensed therapists, psychologists, and support staff are
+              passionate about helping you heal — with expertise, empathy, and
+              understanding.
+            </p>
+
+            <div class="about-stats">
+              <div class="stat-box">
+                <div class="stat-number">98%</div>
+                <div class="stat-label">Client Satisfaction</div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-number">85%</div>
+                <div class="stat-label">Success After Treatment</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="programs" aria-labelledby="programs-heading">
+        <div class="section-title" data-aos="fade-up">
+          <h2 id="programs-heading">Our Programs</h2>
+          <p>Structured treatment options tailored to your needs</p>
+        </div>
+        <div class="programs-grid">
+          <article class="program-card" data-aos="fade-up" data-aos-delay="100">
+            <img
+              src="/assets/php.webp"
+              alt="Partial Hospitalization Program therapy session"
+              width="600"
+              height="280"
+              loading="lazy"
+            />
+            <div class="service-content">
+              <h3>Partial Hospitalization Program (PHP)</h3>
+              <p>
+                Our PHP offers full-day structured therapeutic support, perfect
+                for those who need intensive care without overnight stays.
+              </p>
+            </div>
+          </article>
+          <article class="program-card" data-aos="fade-up" data-aos-delay="200">
+            <img
+              src="/assets/iop.webp"
+              alt="Intensive Outpatient Program group session"
+              width="600"
+              height="280"
+              loading="lazy"
+            />
+            <div class="service-content">
+              <h3>Intensive Outpatient Program (IOP)</h3>
+              <p>
+                Our IOP provides flexible, part-time treatment, allowing clients
+                to balance work, school, and daily life while focusing on
+                recovery.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="services" aria-labelledby="services-heading">
+        <div class="section-title" data-aos="fade-up">
+          <h2 id="services-heading">Services We Offer</h2>
+          <p>Specialized therapeutic approaches for your unique needs</p>
+        </div>
+        <div class="services-offered-grid" data-aos="fade-up">
+          <article class="service-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-icon">
+              <img
+                src="/assets/marriage.webp"
+                alt="Marriage and Family Therapy"
+                width="70"
+                height="70"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-item-content">
+              <h3>Marriage and Family Therapy</h3>
+              <p>
+                Strengthen relationships and rebuild trust with professional
+                guidance and communication tools.
+              </p>
+            </div>
+          </article>
+
+          <article class="service-item" data-aos="fade-up" data-aos-delay="150">
+            <div class="service-icon">
+              <img
+                src="/assets/anxiety.webp"
+                alt="Anxiety & Depression Treatment"
+                width="70"
+                height="70"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-item-content">
+              <h3>Anxiety & Depression Treatment</h3>
+              <p>
+                Evidence-based therapy to manage emotional distress and
+                cultivate resilience.
+              </p>
+            </div>
+          </article>
+
+          <article class="service-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-icon">
+              <img
+                src="/assets/domestic.webp"
+                alt="Domestic Violence Counseling"
+                width="70"
+                height="70"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-item-content">
+              <h3>Domestic Violence Counseling</h3>
+              <p>
+                Safe, confidential support and trauma-informed care to help you
+                heal and move forward.
+              </p>
+            </div>
+          </article>
+
+          <article class="service-item" data-aos="fade-up" data-aos-delay="250">
+            <div class="service-icon">
+              <img
+                src="/assets/stressM.webp"
+                alt="Stress Management"
+                width="70"
+                height="70"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-item-content">
+              <h3>Stress Management</h3>
+              <p>
+                Practical techniques and therapeutic tools to help you handle
+                life's pressures.
+              </p>
+            </div>
+          </article>
+
+          <article class="service-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-icon">
+              <img
+                src="/assets/food.webp"
+                alt="Eating Disorder Treatment"
+                width="70"
+                height="70"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-item-content">
+              <h3>Eating Disorder Treatment</h3>
+              <p>
+                Compassionate care that helps rebuild a balanced and healthy
+                relationship with food.
+              </p>
+            </div>
+          </article>
+
+          <article class="service-item" data-aos="fade-up" data-aos-delay="350">
+            <div class="service-icon">
+              <img
+                src="/assets/substance.webp"
+                alt="Substance Abuse Treatment"
+                width="70"
+                height="70"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-item-content">
+              <h3>Substance Abuse Treatment</h3>
+              <p>
+                Individualized alcohol and drug recovery plans with a focus on
+                lasting sobriety.
+              </p>
+            </div>
+          </article>
+
+          <article class="service-item" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-icon">
+              <img
+                src="/assets/psychotherapy.webp"
+                alt="Psychotherapy"
+                width="70"
+                height="70"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-item-content">
+              <h3>Psychotherapy</h3>
+              <p>
+                Explore emotional health and develop positive thought patterns.
+              </p>
+            </div>
+          </article>
+
+          <article class="service-item" data-aos="fade-up" data-aos-delay="450">
+            <div class="service-icon">
+              <img
+                src="/assets/cbt.webp"
+                alt="Cognitive Behavioral Therapy (CBT)"
+                width="70"
+                height="70"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-item-content">
+              <h3>Cognitive Behavioral Therapy (CBT)</h3>
+              <p>
+                Evidence-based techniques to transform negative thinking and
+                behaviors.
+              </p>
+            </div>
+          </article>
+
+          <article class="service-item" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-icon">
+              <img
+                src="/assets/trauma.webp"
+                alt="Trauma Therapy"
+                width="70"
+                height="70"
+                loading="lazy"
+              />
+            </div>
+            <div class="service-item-content">
+              <h3>Trauma Therapy</h3>
+              <p>
+                Our trauma-focused therapies help individuals process and heal
+                from past traumatic experiences using evidence-based approaches.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="why-choose" aria-labelledby="why-choose-heading">
+        <div class="section-title" data-aos="fade-up">
+          <h2 id="why-choose-heading">Why Choose Simply Recover OC?</h2>
+          <p>What sets our care approach apart</p>
+        </div>
+        <div class="why-choose-container" data-aos="fade-up">
+          <div class="why-choose-grid">
+            <article
+              class="why-choose-item"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="why-choose-icon">
+                <i class="why-icon" aria-hidden="true">🧩</i>
+              </div>
+              <div class="why-choose-content">
+                <h3>Individualized, client-centered treatment</h3>
+                <p>
+                  Our care plans are tailored specifically to your needs, goals,
+                  and circumstances.
+                </p>
+              </div>
+            </article>
+
+            <article
+              class="why-choose-item"
+              data-aos="fade-up"
+              data-aos-delay="150"
+            >
+              <div class="why-choose-icon">
+                <i class="why-icon" aria-hidden="true">🏡</i>
+              </div>
+              <div class="why-choose-content">
+                <h3>Warm, supportive environment</h3>
+                <p>
+                  Our welcoming space is designed to make you feel safe,
+                  comfortable, and respected.
+                </p>
+              </div>
+            </article>
+
+            <article
+              class="why-choose-item"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="why-choose-icon">
+                <i class="why-icon" aria-hidden="true">🔬</i>
+              </div>
+              <div class="why-choose-content">
+                <h3>Evidence-based therapies</h3>
+                <p>
+                  We use proven therapeutic approaches validated by research and
+                  clinical success.
+                </p>
+              </div>
+            </article>
+
+            <article
+              class="why-choose-item"
+              data-aos="fade-up"
+              data-aos-delay="250"
+            >
+              <div class="why-choose-icon">
+                <i class="why-icon" aria-hidden="true">👪</i>
+              </div>
+              <div class="why-choose-content">
+                <h3>Family involvement and support</h3>
+                <p>
+                  We recognize the importance of family in the healing process
+                  and provide resources for loved ones.
+                </p>
+              </div>
+            </article>
+
+            <article
+              class="why-choose-item"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="why-choose-icon">
+                <i class="why-icon" aria-hidden="true">🕒</i>
+              </div>
+              <div class="why-choose-content">
+                <h3>Flexible scheduling to fit your life</h3>
+                <p>
+                  Our programs accommodate your work, school, and family
+                  commitments.
+                </p>
+              </div>
+            </article>
+
+            <article
+              class="why-choose-item"
+              data-aos="fade-up"
+              data-aos-delay="350"
+            >
+              <div class="why-choose-icon">
+                <i class="why-icon" aria-hidden="true">🎓</i>
+              </div>
+              <div class="why-choose-content">
+                <h3>Licensed, experienced professionals</h3>
+                <p>
+                  Our team brings extensive training and real-world expertise to
+                  your care.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="testimonials"
+        class="testimonials"
+        aria-labelledby="testimonials-heading"
+      >
+        <div class="section-title" data-aos="fade-up">
+          <h2 id="testimonials-heading">Client Testimonials</h2>
+          <p>Hear from those who found healing with Simply Recover OC</p>
+        </div>
+        <div class="testimonial-slider" data-aos="fade-up" data-aos-delay="200">
+          <button
+            class="slider-arrow prev"
+            onclick="prevSlide()"
+            aria-label="Previous testimonial"
           >
-          <a href="#contact"
-            ><button class="cta-button secondary-button">
-              Contact Us
-            </button></a
+            &#10094;
+          </button>
+          <button
+            class="slider-arrow next"
+            onclick="nextSlide()"
+            aria-label="Next testimonial"
           >
-        </div>
-      </div>
-    </section>
-
-    <section id="about">
-      <div class="section-title" data-aos="fade-up">
-        <h2>About Simply Recover OC</h2>
-        <p>Guided healing with clarity and compassion</p>
-      </div>
-      <div class="about-content">
-        <div class="about-image" data-aos="fade-right" data-aos-delay="200">
-          <div class="image-container">
-            <img
-              src="/assets/support.webp"
-              alt="therapist showing support"
-            />
+            &#10095;
+          </button>
+          <div class="testimonial-wrapper">
+            <div
+              class="testimonial-card"
+              aria-roledescription="slide"
+              aria-label="1 of 5"
+            >
+              <div class="testimonial-content">
+                "Simply Recover OC made healing feel possible. The team truly
+                cares."
+              </div>
+              <div class="testimonial-author">— Emily R.</div>
+            </div>
+            <div
+              class="testimonial-card"
+              aria-roledescription="slide"
+              aria-label="2 of 5"
+            >
+              <div class="testimonial-content">
+                "The support we received as a family changed everything. We
+                communicate better and are stronger than ever."
+              </div>
+              <div class="testimonial-author">— Mark & Jenna T.</div>
+            </div>
+            <div
+              class="testimonial-card"
+              aria-roledescription="slide"
+              aria-label="3 of 5"
+            >
+              <div class="testimonial-content">
+                "The compassionate care I received at Simply Recover transformed
+                my life. Their holistic approach to treating my depression gave
+                me tools I continue to use daily."
+              </div>
+              <div class="testimonial-author">— Sarah M., Newport Beach</div>
+            </div>
+            <div
+              class="testimonial-card"
+              aria-roledescription="slide"
+              aria-label="4 of 5"
+            >
+              <div class="testimonial-content">
+                "After struggling with anxiety for over a decade, I finally
+                found relief at Simply Recover. The tailored treatment plan and
+                supportive environment made all the difference."
+              </div>
+              <div class="testimonial-author">— Michael R., Irvine</div>
+            </div>
+            <div
+              class="testimonial-card"
+              aria-roledescription="slide"
+              aria-label="5 of 5"
+            >
+              <div class="testimonial-content">
+                "As someone who had tried numerous therapists without success, I
+                was losing hope before finding Simply Recover. Their
+                personalized approach and genuine care helped me overcome severe
+                PTSD."
+              </div>
+              <div class="testimonial-author">— Amanda P., Costa Mesa</div>
+            </div>
           </div>
-          <div class="image-container">
-            <img
-              src="/assets/binder.webp"
-              alt="reflection binder"
-            />
+          <div class="slider-controls" role="tablist">
+            <button
+              class="slider-dot active"
+              onclick="goToSlide(0)"
+              aria-label="Show testimonial 1"
+              role="tab"
+              aria-selected="true"
+            ></button>
+            <button
+              class="slider-dot"
+              onclick="goToSlide(1)"
+              aria-label="Show testimonial 2"
+              role="tab"
+              aria-selected="false"
+            ></button>
+            <button
+              class="slider-dot"
+              onclick="goToSlide(2)"
+              aria-label="Show testimonial 3"
+              role="tab"
+              aria-selected="false"
+            ></button>
+            <button
+              class="slider-dot"
+              onclick="goToSlide(3)"
+              aria-label="Show testimonial 4"
+              role="tab"
+              aria-selected="false"
+            ></button>
+            <button
+              class="slider-dot"
+              onclick="goToSlide(4)"
+              aria-label="Show testimonial 5"
+              role="tab"
+              aria-selected="false"
+            ></button>
           </div>
         </div>
-        <div class="about-text" data-aos="fade-left" data-aos-delay="400">
-          <p>
-            Simply Recover OC is an accredited, state-of-the-art rehabilitation
-            center located in the heart of Orange County. Since our founding, we
-            have been dedicated to providing exceptional, evidence-based care
-            for individuals struggling with mental health challenges, trauma,
-            depression, substance abuse, and related conditions.
-          </p>
+      </section>
 
-          <div class="mission-box">
-            <div class="mission-title">Our Mission</div>
-            <p>
-              To make the path to healing clear, accessible, and compassionate
-              for every person and family we serve.
+      <section id="contact" aria-labelledby="contact-heading">
+        <div class="section-title" data-aos="fade-up">
+          <h2 id="contact-heading">Contact Us</h2>
+          <p>We're here to help — take the first step</p>
+        </div>
+        <div class="contact-container" data-aos="fade-up">
+          <div class="contact-info">
+            <address>
+              <div class="contact-detail">
+                <i class="contact-icon" aria-hidden="true">📍</i>
+                <p>
+                  2114 N Broadway, STE 100,<br />
+                  Santa Ana, CA 92706
+                </p>
+              </div>
+              <div class="contact-detail">
+                <i class="contact-icon" aria-hidden="true">📞</i>
+                <p><a href="tel:+16579002111">+1 (657) 900-2111</a></p>
+              </div>
+              <div class="contact-detail">
+                <i class="contact-icon" aria-hidden="true">✉️</i>
+                <p>
+                  <a href="mailto:admin@simplyrecoveroc.com"
+                    >admin@simplyrecoveroc.com</a
+                  >
+                </p>
+              </div>
+            </address>
+            <p class="contact-message">
+              Or fill out the contact form and we'll reach out shortly.
             </p>
           </div>
-
-          <div class="mission-box vision-box">
-            <div class="mission-title">Our Vision</div>
-            <p>
-              A community where mental health and recovery are nurtured without
-              judgment, and every step forward feels simple and supported.
-            </p>
-          </div>
-
-          <p>
-            Our licensed therapists, psychologists, and support staff are
-            passionate about helping you heal — with expertise, empathy, and
-            understanding.
-          </p>
-
-          <div class="about-stats">
-            <div class="stat-box">
-              <div class="stat-number">98%</div>
-              <div class="stat-label">Client Satisfaction</div>
-            </div>
-            <div class="stat-box">
-              <div class="stat-number">85%</div>
-              <div class="stat-label">Success After Treatment</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="programs">
-      <div class="section-title" data-aos="fade-up">
-        <h2>Our Programs</h2>
-        <p>Structured treatment options tailored to your needs</p>
-      </div>
-      <div class="programs-grid">
-        <div
-          class="program-card"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
-          <img
-            src="/assets/php.webp"
-            alt="Partial Hospitalization Program"
-          />
-          <div class="service-content">
-            <h3>Partial Hospitalization Program (PHP)</h3>
-            <p>
-              Our PHP offers full-day structured therapeutic support, perfect
-              for those who need intensive care without overnight stays.
-            </p>
+          <div class="booking-form" data-aos="fade-up" data-aos-delay="200">
+            <form
+              id="contact-form"
+              onsubmit="submitContactForm(event)"
+              aria-labelledby="form-heading"
+            >
+              <h3 id="form-heading" class="visually-hidden">Contact Form</h3>
+              <div class="form-group">
+                <label for="contact-name">Full Name</label>
+                <input type="text" id="contact-name" name="name" required />
+              </div>
+              <div class="form-group">
+                <label for="contact-email">Email Address</label>
+                <input type="email" id="contact-email" name="email" required />
+              </div>
+              <div class="form-group">
+                <label for="contact-phone">Phone Number</label>
+                <input type="tel" id="contact-phone" name="phone" required />
+              </div>
+              <div class="form-group">
+                <label for="contact-subject">Subject</label>
+                <input
+                  type="text"
+                  id="contact-subject"
+                  name="subject"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="contact-message">Message</label>
+                <textarea
+                  id="contact-message"
+                  name="message"
+                  rows="4"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="cta-button">Send</button>
+              <div
+                id="contact-form-status"
+                class="form-status"
+                aria-live="polite"
+              ></div>
+            </form>
           </div>
         </div>
-        <div
-          class="program-card"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
-          <img
-            src="/assets/iop.webp"
-            alt="Intensive Outpatient Program"
-          />
-          <div class="service-content">
-            <h3>Intensive Outpatient Program (IOP)</h3>
-            <p>
-              Our IOP provides flexible, part-time treatment, allowing clients
-              to balance work, school, and daily life while focusing on
-              recovery.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section id="services">
-      <div class="section-title" data-aos="fade-up">
-        <h2>Services We Offer</h2>
-        <p>Specialized therapeutic approaches for your unique needs</p>
-      </div>
-      <div class="services-offered-grid" data-aos="fade-up">
-        <div class="service-item" data-aos="fade-up" data-aos-delay="100">
-          <div class="service-icon">
-            <img
-              src="/assets/marriage.webp"
-              alt="Marriage and Family Therapy"
-            />
-          </div>
-          <div class="service-item-content">
-            <h3>Marriage and Family Therapy</h3>
-            <p>
-              Strengthen relationships and rebuild trust with professional
-              guidance and communication tools.
-            </p>
-          </div>
-        </div>
-
-        <div class="service-item" data-aos="fade-up" data-aos-delay="150">
-          <div class="service-icon">
-            <img
-              src="/assets/anxiety.webp"
-              alt="Anxiety & Depression Treatment"
-            />
-          </div>
-          <div class="service-item-content">
-            <h3>Anxiety & Depression Treatment</h3>
-            <p>
-              Evidence-based therapy to manage emotional distress and cultivate
-              resilience.
-            </p>
-          </div>
-        </div>
-
-        <div class="service-item" data-aos="fade-up" data-aos-delay="200">
-          <div class="service-icon">
-            <img
-              src="/assets/domestic.webp"
-              alt="Domestic Violence Counseling"
-            />
-          </div>
-          <div class="service-item-content">
-            <h3>Domestic Violence Counseling</h3>
-            <p>
-              Safe, confidential support and trauma-informed care to help you
-              heal and move forward.
-            </p>
-          </div>
-        </div>
-
-        <div class="service-item" data-aos="fade-up" data-aos-delay="250">
-          <div class="service-icon">
-            <img
-              src="/assets/stressM.webp"
-              alt="Stress Management"
-            />
-          </div>
-          <div class="service-item-content">
-            <h3>Stress Management</h3>
-            <p>
-              Practical techniques and therapeutic tools to help you handle
-              life's pressures.
-            </p>
-          </div>
-        </div>
-
-        <div class="service-item" data-aos="fade-up" data-aos-delay="300">
-          <div class="service-icon">
-            <img
-              src="/assets/food.webp"
-              alt="Eating Disorder Treatment"
-            />
-          </div>
-          <div class="service-item-content">
-            <h3>Eating Disorder Treatment</h3>
-            <p>
-              Compassionate care that helps rebuild a balanced and healthy
-              relationship with food.
-            </p>
-          </div>
-        </div>
-
-        <div class="service-item" data-aos="fade-up" data-aos-delay="350">
-          <div class="service-icon">
-            <img
-              src="/assets/substance.webp"
-              alt="Substance Abuse Treatment"
-            />
-          </div>
-          <div class="service-item-content">
-            <h3>Substance Abuse Treatment</h3>
-            <p>
-              Individualized alcohol and drug recovery plans with a focus on
-              lasting sobriety.
-            </p>
-          </div>
-        </div>
-
-        <div class="service-item" data-aos="fade-up" data-aos-delay="400">
-          <div class="service-icon">
-            <img
-              src="/assets/psychotherapy.webp"
-              alt="Psychotherapy"
-            />
-          </div>
-          <div class="service-item-content">
-            <h3>Psychotherapy</h3>
-            <p>
-              Explore emotional health and develop positive thought patterns.
-            </p>
-          </div>
-        </div>
-
-        <div class="service-item" data-aos="fade-up" data-aos-delay="450">
-          <div class="service-icon">
-            <img
-              src="/assets/cbt.webp"
-              alt="Cognitive Behavioral Therapy (CBT)"
-            />
-          </div>
-          <div class="service-item-content">
-            <h3>Cognitive Behavioral Therapy (CBT)</h3>
-            <p>
-              Evidence-based techniques to transform negative thinking and
-              behaviors.
-            </p>
-          </div>
-        </div>
-
-        <div class="service-item" data-aos="fade-up" data-aos-delay="500">
-          <div class="service-icon">
-            <img
-              src="/assets/trauma.webp"
-              alt="Trauma Therapy"
-            />
-          </div>
-          <div class="service-item-content">
-            <h3>Trauma Therapy</h3>
-            <p>
-              Our trauma-focused therapies help individuals process and heal
-              from past traumatic experiences using evidence-based approaches.
-            </p>
-          </div>
-        </div>
-
-        
-      </div>
-    </section>
-
-    <section id="why-choose">
-      <div class="section-title" data-aos="fade-up">
-        <h2>Why Choose Simply Recover OC?</h2>
-        <p>What sets our care approach apart</p>
-      </div>
-      <div class="why-choose-container" data-aos="fade-up">
-        <div class="why-choose-grid">
-          <div class="why-choose-item" data-aos="fade-up" data-aos-delay="100">
-            <div class="why-choose-icon">
-              <i class="why-icon">🧩</i>
-            </div>
-            <div class="why-choose-content">
-              <h3>Individualized, client-centered treatment</h3>
-              <p>
-                Our care plans are tailored specifically to your needs, goals,
-                and circumstances.
-              </p>
-            </div>
-          </div>
-
-          <div class="why-choose-item" data-aos="fade-up" data-aos-delay="150">
-            <div class="why-choose-icon">
-              <i class="why-icon">🏡</i>
-            </div>
-            <div class="why-choose-content">
-              <h3>Warm, supportive environment</h3>
-              <p>
-                Our welcoming space is designed to make you feel safe,
-                comfortable, and respected.
-              </p>
-            </div>
-          </div>
-
-          <div class="why-choose-item" data-aos="fade-up" data-aos-delay="200">
-            <div class="why-choose-icon">
-              <i class="why-icon">🔬</i>
-            </div>
-            <div class="why-choose-content">
-              <h3>Evidence-based therapies</h3>
-              <p>
-                We use proven therapeutic approaches validated by research and
-                clinical success.
-              </p>
-            </div>
-          </div>
-
-          <div class="why-choose-item" data-aos="fade-up" data-aos-delay="250">
-            <div class="why-choose-icon">
-              <i class="why-icon">👪</i>
-            </div>
-            <div class="why-choose-content">
-              <h3>Family involvement and support</h3>
-              <p>
-                We recognize the importance of family in the healing process and
-                provide resources for loved ones.
-              </p>
-            </div>
-          </div>
-
-          <div class="why-choose-item" data-aos="fade-up" data-aos-delay="300">
-            <div class="why-choose-icon">
-              <i class="why-icon">🕒</i>
-            </div>
-            <div class="why-choose-content">
-              <h3>Flexible scheduling to fit your life</h3>
-              <p>
-                Our programs accommodate your work, school, and family
-                commitments.
-              </p>
-            </div>
-          </div>
-
-          <div class="why-choose-item" data-aos="fade-up" data-aos-delay="350">
-            <div class="why-choose-icon">
-              <i class="why-icon">🎓</i>
-            </div>
-            <div class="why-choose-content">
-              <h3>Licensed, experienced professionals</h3>
-              <p>
-                Our team brings extensive training and real-world expertise to
-                your care.
-              </p>
-            </div>
-          </div>
-
-          
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="testimonials" class="testimonials">
-      <div class="section-title" data-aos="fade-up">
-        <h2>Client Testimonials</h2>
-        <p>Hear from those who found healing with Simply Recover OC</p>
-      </div>
-      <div class="testimonial-slider" data-aos="fade-up" data-aos-delay="200">
-        <div class="slider-arrow prev" onclick="prevSlide()">&#10094;</div>
-        <div class="slider-arrow next" onclick="nextSlide()">&#10095;</div>
-        <div class="testimonial-wrapper">
-          <div class="testimonial-card">
-            <div class="testimonial-content">
-              "Simply Recover OC made healing feel possible. The team truly
-              cares."
-            </div>
-            <div class="testimonial-author">— Emily R.</div>
-          </div>
-          <div class="testimonial-card">
-            <div class="testimonial-content">
-              "The support we received as a family changed everything. We
-              communicate better and are stronger than ever."
-            </div>
-            <div class="testimonial-author">— Mark & Jenna T.</div>
-          </div>
-          <div class="testimonial-card">
-            <div class="testimonial-content">
-              "The compassionate care I received at Simply Recover transformed
-              my life. Their holistic approach to treating my depression gave me
-              tools I continue to use daily."
-            </div>
-            <div class="testimonial-author">— Sarah M., Newport Beach</div>
-          </div>
-          <div class="testimonial-card">
-            <div class="testimonial-content">
-              "After struggling with anxiety for over a decade, I finally found
-              relief at Simply Recover. The tailored treatment plan and
-              supportive environment made all the difference."
-            </div>
-            <div class="testimonial-author">— Michael R., Irvine</div>
-          </div>
-          <div class="testimonial-card">
-            <div class="testimonial-content">
-              "As someone who had tried numerous therapists without success, I
-              was losing hope before finding Simply Recover. Their personalized
-              approach and genuine care helped me overcome severe PTSD."
-            </div>
-            <div class="testimonial-author">— Amanda P., Costa Mesa</div>
-          </div>
-        </div>
-        <div class="slider-controls">
-          <div class="slider-dot active" onclick="goToSlide(0)"></div>
-          <div class="slider-dot" onclick="goToSlide(1)"></div>
-          <div class="slider-dot" onclick="goToSlide(2)"></div>
-          <div class="slider-dot" onclick="goToSlide(3)"></div>
-          <div class="slider-dot" onclick="goToSlide(4)"></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <div class="section-title" data-aos="fade-up">
-        <h2>Contact Us</h2>
-        <p>We're here to help — take the first step</p>
-      </div>
-      <div class="contact-container" data-aos="fade-up">
-        <div class="contact-info">
-          <div class="contact-detail">
-            <i class="contact-icon">📍</i>
-            <p>2114 N Broadway, STE 100,<br> Santa Ana, CA 92706</p>
-          </div>
-          <div class="contact-detail">
-            <i class="contact-icon">📞</i>
-            <p><a href="tel:+16579002111">+1 (657) 900-2111</a></p>
-          </div>
-          <div class="contact-detail">
-            <i class="contact-icon">✉️</i>
-            <p>
-              <a href="mailto:admin@simplyrecoveroc.com"
-                >admin@simplyrecoveroc.com</a
-              >
-            </p>
-          </div>
-          <p class="contact-message">
-            Or fill out the contact form and we'll reach out shortly.
-          </p>
+      <section id="booking" class="booking" aria-labelledby="booking-heading">
+        <div class="section-title" data-aos="fade-up">
+          <h2 id="booking-heading">Book a Consultation</h2>
+          <p>Take the first step on your journey to recovery</p>
         </div>
         <div class="booking-form" data-aos="fade-up" data-aos-delay="200">
-          <form id="contact-form" onsubmit="submitContactForm(event)">
+          <form
+            id="booking-form"
+            onsubmit="submitBookingForm(event)"
+            aria-labelledby="booking-form-heading"
+          >
+            <h3 id="booking-form-heading" class="visually-hidden">
+              Booking Form
+            </h3>
             <div class="form-group">
-              <label for="contact-name">Full Name</label>
-              <input type="text" id="contact-name" name="name" required />
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" required />
             </div>
             <div class="form-group">
-              <label for="contact-email">Email Address</label>
-              <input type="email" id="contact-email" name="email" required />
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" required />
             </div>
             <div class="form-group">
-              <label for="contact-phone">Phone Number</label>
-              <input type="tel" id="contact-phone" name="phone" required />
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" required />
             </div>
             <div class="form-group">
-              <label for="contact-subject">Subject</label>
-              <input type="text" id="contact-subject" name="subject" required />
+              <label for="service">Service of Interest</label>
+              <select id="service" name="service" required>
+                <option value="" disabled selected>Select a service...</option>
+                <option value="Trauma">Trauma Therapy</option>
+                <option value="Anxiety & Depression">
+                  Anxiety & Depression Treatment
+                </option>
+                <option value="Marriage & Family">
+                  Marriage & Family Therapy
+                </option>
+                <option value="Domestic Violence">Domestic Violence</option>
+                <option value="Stress Management">Stress Management</option>
+                <option value="Eating Disorder">
+                  Eating Disorder Treatment
+                </option>
+                <option value="Substance Abuse">
+                  Substance Abuse Treatment
+                </option>
+                <option value="Psychotherapy">Psychotherapy</option>
+                <option value="CBT">Cognitive Behavioral Therapy (CBT)</option>
+                <option value="Other">Other/Not Sure</option>
+              </select>
             </div>
             <div class="form-group">
-              <label for="contact-message">Message</label>
-              <textarea
-                id="contact-message"
-                name="message"
-                rows="4"
-                required
-              ></textarea>
+              <label for="message">Message (Optional)</label>
+              <textarea id="message" name="message" rows="4"></textarea>
             </div>
             <button type="submit" class="cta-button">
-              Send
+              Send Booking Request
             </button>
-            <div id="contact-form-status" class="form-status"></div>
+            <div
+              id="booking-form-status"
+              class="form-status"
+              aria-live="polite"
+            ></div>
           </form>
         </div>
-      </div>
-    </section>
-
-    <section id="booking" class="booking">
-      <div class="section-title" data-aos="fade-up">
-        <h2>Book a Consultation</h2>
-        <p>Take the first step on your journey to recovery</p>
-      </div>
-      <div class="booking-form" data-aos="fade-up" data-aos-delay="200">
-        <form id="booking-form" onsubmit="submitBookingForm(event)">
-          <div class="form-group">
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" required />
-          </div>
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" required />
-          </div>
-          <div class="form-group">
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" required />
-          </div>
-          <div class="form-group">
-            <label for="service">Service of Interest</label>
-            <select id="service" name="service" required>
-              <option value="" disabled selected>Select a service...</option>
-              <option value="Trauma">Trauma Therapy</option>
-              <option value="Anxiety & Depression">Anxiety & Depression Treatment</option>
-              <option value="Marriage & Family">Marriage & Family Therapy</option>
-              <option value="Domestic Violence">Domestic Violence</option>
-              <option value="Stress Management">Stress Management</option>
-              <option value="Eating Disorder">Eating Disorder Treatment</option>
-              <option value="Substance Abuse">Substance Abuse Treatment</option>
-              <option value="Psychotherapy">Psychotherapy</option>
-              <option value="CBT">Cognitive Behavioral Therapy (CBT)</option>
-              <option value="Other">Other/Not Sure</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="message">Message (Optional)</label>
-            <textarea id="message" name="message" rows="4"></textarea>
-          </div>
-          <button type="submit" class="cta-button">Send Booking Request</button>
-          <div id="booking-form-status" class="form-status"></div>
-        </form>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <footer data-aos="fade-up">
       <div class="footer-content">
@@ -617,39 +882,43 @@
         </div>
         <div class="footer-contact">
           <h3>Contact Information</h3>
-          <div class="contact-item">
-            <p>
-              📍
-              <a
-                href="https://maps.google.com/?q=2114+N+Broadway,+Ste+100,+Santa+Ana,+CA,+92706"
-                target="_blank"
-                style="color: white; text-decoration: none"
-              >
-                2114 N Broadway, Ste 100<br />
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Santa Ana, CA, 92706
-              </a>
-            </p>
-          </div>
-          <div class="contact-item">
-            <p>
-              📞
-              <a
-                href="tel:+16579002111"
-                style="color: white; text-decoration: none"
-                >+1 (657) 900-2111</a
-              >
-            </p>
-          </div>
-          <div class="contact-item">
-            <p>
-              ✉️
-              <a
-                href="mailto:admin@simplyrecoveroc.com"
-                style="color: white; text-decoration: none"
-                >admin@simplyrecoveroc.com</a
-              >
-            </p>
-          </div>
+          <address>
+            <div class="contact-item">
+              <p>
+                📍
+                <a
+                  href="https://maps.google.com/?q=2114+N+Broadway,+Ste+100,+Santa+Ana,+CA,+92706"
+                  target="_blank"
+                  rel="noopener"
+                  style="color: white; text-decoration: none"
+                >
+                  2114 N Broadway, Ste 100<br />
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Santa Ana, CA,
+                  92706
+                </a>
+              </p>
+            </div>
+            <div class="contact-item">
+              <p>
+                📞
+                <a
+                  href="tel:+16579002111"
+                  style="color: white; text-decoration: none"
+                  >+1 (657) 900-2111</a
+                >
+              </p>
+            </div>
+            <div class="contact-item">
+              <p>
+                ✉️
+                <a
+                  href="mailto:admin@simplyrecoveroc.com"
+                  style="color: white; text-decoration: none"
+                  >admin@simplyrecoveroc.com</a
+                >
+              </p>
+            </div>
+          </address>
         </div>
         <div class="footer-links">
           <h3>Quick Links</h3>
@@ -664,10 +933,23 @@
         </div>
       </div>
       <div class="copyright">
-        <p>&copy; 2025 Simply Recover OC. All rights reserved.</p>
+        <p>
+          &copy; <span id="current-year">2025</span> Simply Recover OC. All
+          rights reserved.
+        </p>
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Add a small utility script to update the year automatically -->
+    <script>
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
+    </script>
+
+    <!-- Load AOS (Animate on Scroll) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <!-- Load main script -->
+    <script src="script.js" defer></script>
   </body>
 </html>
