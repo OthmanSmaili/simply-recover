@@ -18,6 +18,10 @@
   font-family: var(--body-font);
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 body {
   background: linear-gradient(
     90deg,
