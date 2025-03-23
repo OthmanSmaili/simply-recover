@@ -60,7 +60,7 @@ header {
   box-shadow: 0 2px 15px #1b7c5c7a;
   position: fixed;
   width: 100%;
-  padding-top: env(safe-area-inset-top);
+  padding: calc(env(safe-area-inset-top, 0px) + 1rem) 1 rem 1rem 1 rem;
   z-index: 100;
   top: 0;
 }
@@ -1258,5 +1258,16 @@ footer {
 
   .contact-message {
     text-align: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero {
+    padding-top: 140px;
+    height: 100.5vh;
+  }
+
+  footer {
+    font-size: 0.8em;
   }
 }
