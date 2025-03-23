@@ -238,8 +238,7 @@ nav {
 /* Hero Section */
 .hero {
   background: linear-gradient(rgba(91, 142, 125, 0.8), rgba(91, 142, 125, 0.8)),
-    url(/assets/therapy.jpg)
-      no-repeat center center/cover;
+    url(/assets/therapy.jpg) no-repeat center center/cover;
   height: 80vh;
   display: flex;
   align-items: center;
