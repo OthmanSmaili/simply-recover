@@ -83,14 +83,21 @@ nav {
 }
 
 .logo {
-  font-family: var(--heading-font);
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: var(--primary);
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   height: 100%;
-  letter-spacing: -0.03em;
+  position: relative;
+}
+
+.logo-img {
+  position: absolute;
+  height: 250px; /* Base size for desktop */
+  width: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  z-index: 101;
 }
 
 .logo span {
@@ -580,10 +587,15 @@ section {
 
 /* Responsive adjustments */
 @media (max-width: 1200px) {
+  .logo-img {
+    height: 240px;
+  }
+
   .service-item {
     width: calc(50% - 1rem); /* 2 items per row for medium screens */
   }
 }
+
 
 @media (max-width: 768px) {
   .service-item {
@@ -1039,6 +1051,10 @@ footer {
     display: block;
   }
 
+  .logo-img {
+    height: 230px;
+  }
+
   .hero h1 {
     font-size: 2.5rem;
   }
@@ -1117,6 +1133,10 @@ footer {
     padding-top: 60px; /* Slightly smaller padding for mobile */
   }
 
+  .logo-img {
+    height: 220px;
+  }
+
   .hero {
     padding-top: 100px;
     height: 90vh;
@@ -1163,6 +1183,10 @@ footer {
 }
 
 @media (max-width: 576px) {
+  .logo-img {
+    height: 200px; /* Increased */
+  }
+
   .hero h1 {
     font-size: 2rem;
   }
@@ -1263,6 +1287,10 @@ footer {
 }
 
 @media (max-width: 400px) {
+  .logo-img {
+    height: 170px; /* Increased */
+  }
+
   .hero {
     padding-top: 140px;
     height: 100.5vh;
