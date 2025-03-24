@@ -58,7 +58,7 @@ h6 {
 /* Header and Navigation */
 header {
   background-color: white;
-  box-shadow: 0 2px 15px #1b7c5c7a;
+  /* box-shadow: 0 2px 15px #1b7c5c7a; */
   position: fixed;
   width: 100%;
   padding: calc(env(safe-area-inset-top, 0px) + 1rem) 1 rem 1rem 1 rem;
@@ -1291,7 +1291,7 @@ footer {
   }
 
   .hero {
-    padding-top: 140px;
+    padding-top: 120px;
     height: 100.5vh;
   }
 
